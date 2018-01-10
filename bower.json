@@ -1,0 +1,21 @@
+{
+  "name": "Keycloak-angularjs",
+  "homepage": "https://github.com/nutank/Keycloak-angularjs",
+  "authors": [
+    "Nutan Kamat <nutan@ajency.in>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "keycloak": "^3.4.2"
+  }
+}

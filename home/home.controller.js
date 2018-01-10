@@ -24,6 +24,7 @@
             UserService.GetByUsername($rootScope.globals.currentUser.username)
                 .then(function (user) {
                     vm.user = user;
+                    vm.user = $rootScope.globals.currentUser;
                 });
         }
 
