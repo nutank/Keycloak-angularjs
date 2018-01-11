@@ -7,14 +7,16 @@
 
     function initializeKeycloak() {
         var keycloakConfig = {
-              "realm": "Goomo",
-              "url": "http://127.0.0.1:8180/auth",
-              "ssl-required": "external",
-              "clientId": "angularjs-lms",
-              "credentials": {
-                "secret": "ebc1e96e-0d5e-45d1-a1ea-47b76c240d57"
-              },
-              "confidential-port": 0
+          "realm": "GoomoPOC",
+          "auth-server-url": "http://keycloakserver.ajency.in/auth",
+          "ssl-required": "external",
+          "resource": "angular-js-app",
+          "credentials": {
+            "secret": "ef7c6c27-836b-422b-ab77-f4ca5ee88540"
+          },
+          "use-resource-role-mappings": true,
+          "confidential-port": 0,
+          "policy-enforcer": {}
         };
         
         var keycloak = Keycloak(keycloakConfig);
