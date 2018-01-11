@@ -22,12 +22,15 @@
         var keycloak = Keycloak(keycloakConfig);
       
         keycloak.init({
-            onLoad: 'login-required'
+            onLoad: 'check-sso'
         }).success(function () {
             keycloak.loadUserInfo().success(function (userInfo) {
 
-                // angular.bootstrap(document, ['app']); 
-                bootstrapAngular(keycloak, userInfo);
+                keycloak.hasResourceRole('angular-js-app-role').success(function (userInfo) {
+
+                    // angular.bootstrap(document, ['app']); 
+                    bootstrapAngular(keycloak, userInfo);
+                });
             });
         });
     }  
