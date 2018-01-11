@@ -22,7 +22,7 @@
         var keycloak = Keycloak(keycloakConfig);
       
         keycloak.init({
-            onLoad: 'check-sso'
+            onLoad: 'login-required'
         }).success(function () {
             keycloak.loadUserInfo().success(function (userInfo) {
 
