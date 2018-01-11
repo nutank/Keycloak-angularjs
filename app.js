@@ -8,11 +8,11 @@
     function initializeKeycloak() {
         var keycloakConfig = {
           "realm": "GoomoPOC",
-          "auth-server-url": "http://keycloakserver.ajency.in/auth",
+          "url": "http://keycloakserver.ajency.in/auth",
           "ssl-required": "external",
           "resource": "angular-js-app",
           "credentials": {
-            "secret": "ef7c6c27-836b-422b-ab77-f4ca5ee88540"
+            "clientId": "ef7c6c27-836b-422b-ab77-f4ca5ee88540"
           },
           "use-resource-role-mappings": true,
           "confidential-port": 0,
