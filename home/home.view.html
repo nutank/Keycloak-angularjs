@@ -1,11 +1,21 @@
-﻿<h1>Hi {{vm.user.username}}!</h1>
-<p>You're logged in!!</p>
-<h3>All registered users:</h3>
-<ul>
-    <li ng-repeat="user in vm.allUsers">
-        {{user.username}} ({{user.firstName}} {{user.lastName}})
-        - <a ng-click="vm.deleteUser(user.id)">Delete</a>
-    </li>
-</ul>
-<p>&nbsp;</p>
-<p><a href="http://keycloakserver.ajency.in/auth/realms/GoomoPOC/protocol/openid-connect/logout?redirect_uri=http://angularjsapp.ajency.in/" class="btn btn-primary">Logout</a></p>
+﻿
+<div ng-if="vim.user.accessDenied=true">
+	<h1>Hi {{vm.user.username}}!</h1>
+	<p>You're logged in!!</p>
+	<h3>All registered users:</h3>
+	<ul>
+	    <li ng-repeat="user in vm.allUsers">
+	        {{user.username}} ({{user.firstName}} {{user.lastName}})
+	        - <a ng-click="vm.deleteUser(user.id)">Delete</a>
+	    </li>
+	</ul>
+	<p>&nbsp;</p>
+	<p><a href="http://keycloakserver.ajency.in/auth/realms/GoomoPOC/protocol/openid-connect/logout?redirect_uri=http://angularjsapp.ajency.in/" class="btn btn-primary">Logout</a></p>	
+
+</div>
+
+<div ng-if="vim.user.accessDenied=false">
+	<p><a href="http://keycloakserver.ajency.in/auth/realms/GoomoPOC/protocol/openid-connect/logout?redirect_uri=http://angularjsapp.ajency.in/" class="btn btn-primary">Login Again</a></p>	
+
+</div>
+

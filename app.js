@@ -26,11 +26,9 @@
         }).success(function () {
             keycloak.loadUserInfo().success(function (userInfo) {
 
-                if(keycloak.hasResourceRole('angular-js-app-role')){
-
                     // angular.bootstrap(document, ['app']); 
                     bootstrapAngular(keycloak, userInfo);
-                }
+                
             });
         });
     }  
@@ -44,12 +42,18 @@
 
             .run(['$rootScope', '$location', '$cookies', '$http', '$interval', function ($rootScope, $location, $cookies, $http, $interval) {
 
+                var accessDenied=false;
                 // keep user logged in after page refresh
                 $rootScope.globals = $cookies.getObject('globals') || {};
+
+                if(keycloak.hasResourceRole('angular-js-app-role')){
+                        accessDenied = true;
+                }
                 
                 $rootScope.globals.currentUser = {
                     username: userInfo.name || userInfo.preferred_username,
-                    roles: keycloak.realmAccess.roles
+                    roles: keycloak.realmAccess.roles,
+                    accessDenied: accessDenied
                 };
 
 
