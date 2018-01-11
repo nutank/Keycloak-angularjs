@@ -42,12 +42,12 @@
 
             .run(['$rootScope', '$location', '$cookies', '$http', '$interval', function ($rootScope, $location, $cookies, $http, $interval) {
 
-                var accessDenied=true;
+                var accessDenied='true';
                 // keep user logged in after page refresh
                 $rootScope.globals = $cookies.getObject('globals') || {};
 
                 if(keycloak.hasResourceRole('angular-js-app-role')){
-                        accessDenied = false;
+                        accessDenied = 'false';
                 }
                 
                 $rootScope.globals.currentUser = {
