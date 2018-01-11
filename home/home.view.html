@@ -1,5 +1,5 @@
 ﻿
-<div ng-if="vim.user.accessDenied=true">
+<div ng-if="vm.user.accessDenied=true">
 	<h1>Hi {{vm.user.username}}!</h1>
 	<p>You're logged in!!</p>
 	<h3>All registered users:</h3>
@@ -14,7 +14,7 @@
 
 </div>
 
-<div ng-if="vim.user.accessDenied=false">
+<div ng-if="vm.user.accessDenied=false">
 	<p><a href="http://keycloakserver.ajency.in/auth/realms/GoomoPOC/protocol/openid-connect/logout?redirect_uri=http://angularjsapp.ajency.in/" class="btn btn-primary">Login Again</a></p>	
 
 </div>
