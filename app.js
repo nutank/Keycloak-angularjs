@@ -26,11 +26,11 @@
         }).success(function () {
             keycloak.loadUserInfo().success(function (userInfo) {
 
-                keycloak.hasResourceRole('angular-js-app-role').success(function (userInfo) {
+                if(keycloak.hasResourceRole('angular-js-app-role')){
 
                     // angular.bootstrap(document, ['app']); 
                     bootstrapAngular(keycloak, userInfo);
-                });
+                }
             });
         });
     }  
