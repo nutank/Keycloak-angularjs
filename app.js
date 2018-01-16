@@ -7,12 +7,12 @@
 
     function initializeKeycloak() {
         var keycloakConfig = {
-          "realm": "GoomoPOC",
-          "url": "http://keycloakserver.ajency.in/auth",
+          "realm": "GoomoDemo",
+          "auth-server-url": "http://keycloakserver.ajency.in/auth",
           "ssl-required": "external",
-          "clientId": "angular-js-app",
+          "resource": "finance-portal-frontend-angularjs",
           "credentials": {
-            "secret": "ef7c6c27-836b-422b-ab77-f4ca5ee88540"
+            "secret": "f8b5923c-1a36-4394-a49a-f44a2ae6596a"
           },
           "use-resource-role-mappings": true,
           "confidential-port": 0,
@@ -46,7 +46,7 @@
                 // keep user logged in after page refresh
                 $rootScope.globals = $cookies.getObject('globals') || {};
 
-                if(keycloak.hasResourceRole('angular-js-app-role')){
+                if(keycloak.hasResourceRole('application_access')){
                         accessDenied = 'false';
                 }
                 
