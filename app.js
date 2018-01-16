@@ -8,9 +8,9 @@
     function initializeKeycloak() {
         var keycloakConfig = {
           "realm": "GoomoDemo",
-          "auth-server-url": "http://keycloakserver.ajency.in/auth",
+          "url": "http://keycloakserver.ajency.in/auth",
           "ssl-required": "external",
-          "resource": "finance-portal-frontend-angularjs",
+          "clientId": "finance-portal-frontend-angularjs",
           "credentials": {
             "secret": "f8b5923c-1a36-4394-a49a-f44a2ae6596a"
           },
