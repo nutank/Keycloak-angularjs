@@ -10,7 +10,7 @@
           "realm": "GoomoLocal",
           "url": "http://keycloakserver.ajency.in/auth",
           "ssl-required": "external",
-          "clientId": "angular-js-app",
+          "clientId": "finance-portal-frontend-angularjs",
           "credentials": {
             "secret": "74e0a6ab-32d0-4381-a7a4-a6720503b1dd"
           },
