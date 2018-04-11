@@ -1,0 +1,12 @@
+{
+    "realm": "GoomoLocal",
+    "auth-server-url": "http://keycloakserver.ajency.in/auth",
+    "ssl-required": "external",
+    "resource": "lms-webapp",
+    "credentials": {
+      "secret": "a1a6bb7e-9179-40c4-b000-0cad4f58a9c1"
+    },
+    "use-resource-role-mappings": true,
+    "confidential-port": 0,
+    "policy-enforcer": {}
+  }

@@ -1,0 +1,20 @@
+{
+  "name": "Keycloak-angularjs",
+  "homepage": "https://github.com/nutank/Keycloak-angularjs",
+  "authors": [
+    "cyrus2021 <cyrus@ajency.in>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "ajency-keycloak-js": "^1.4.1"
+  }
+}

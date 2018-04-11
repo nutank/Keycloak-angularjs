@@ -1,0 +1,25 @@
+{
+  "name": "ajency-keycloak-js",  
+  "version": "1.4.1",
+  "description": "a wrapper for keycloak by ajency.in",
+  "main": "dist/aj-keycloak.js",
+  "scripts": {
+    "test": "mocha --reporter spec"
+  },
+  "author": "Cyrus Furtado",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^3.0.0",
+    "gulp-util": "^3.0.8",
+    "mocha": "^5.0.5",
+    "pump": "^3.0.0"
+  },
+  "dependencies": {
+    "keycloak-js": "^4.0.0-beta.1",
+    "q": "^1.5.1"
+  }
+}

@@ -23,7 +23,8 @@
                 var response;
                 UserService.GetByUsername(username)
                     .then(function (user) {
-                        if (user !== null && user.password === password) {
+                        // if (user !== null && user.password === password) {
+                        if (user !== null) {
                             response = { success: true };
                         } else {
                             response = { success: false, message: 'Username or password is incorrect' };

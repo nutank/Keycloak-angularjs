@@ -5,13 +5,17 @@
         .module('app')
         .controller('HomeController', HomeController);
 
-    HomeController.$inject = ['UserService', '$rootScope'];
-    function HomeController(UserService, $rootScope) {
+    HomeController.$inject = ['UserService', '$rootScope', '$ajkeycloak'];
+    function HomeController(UserService, $rootScope, $ajkeycloak) {
         var vm = this;
 
         vm.user = null;
         vm.allUsers = [];
         vm.deleteUser = deleteUser;
+
+        vm.logout = function(){
+            $ajkeycloak.keycloak.logout();
+        }
 
         initController();
 
